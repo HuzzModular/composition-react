@@ -22,10 +22,7 @@ function fallbackRender({ error }) {
 
 function App() {
   return (
-    <ErrorBoundary
-      onError={(error) => console.log({ error })}
-      fallbackRender={fallbackRender}
-    >
+    <ErrorBoundary fallbackRender={fallbackRender}>
       <Product
         product={data}
         title={<Product.Title />}
